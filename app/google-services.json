@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1083188395475",
+    "firebase_url": "https://hackforwomen.firebaseio.com",
+    "project_id": "hackforwomen",
+    "storage_bucket": "hackforwomen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083188395475:android:20f6b19a466f9d9a678326",
+        "android_client_info": {
+          "package_name": "com.example.hackforwomen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1083188395475-vno8v7ub18dpbb9ko5cvs9ms162vt97f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hackforwomen",
+            "certificate_hash": "665fd2ec6218eaed91dd78abc67ea79084193287"
+          }
+        },
+        {
+          "client_id": "1083188395475-42cnl4bva624hlvuuf6th7kdobou023u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABebBgZM_8vvDVda6yT3u4MRlphg-wmX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1083188395475-42cnl4bva624hlvuuf6th7kdobou023u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
