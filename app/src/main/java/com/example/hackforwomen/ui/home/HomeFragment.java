@@ -21,11 +21,10 @@ public class HomeFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-<<<<<<< HEAD
 
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-=======
+        //View root = inflater.inflate(R.layout.fragment_home, container, false);
+
 //        homeViewModel =
 //                ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
@@ -36,7 +35,6 @@ public class HomeFragment extends Fragment {
 //                textView.setText(s);
 //            }
 //        });
->>>>>>> 29096d670d17cfaa12cb45ee5bcdef3fdc9428f4
         return root;
     }
 }

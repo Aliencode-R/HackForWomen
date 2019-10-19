@@ -25,12 +25,12 @@ public class ToolsFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-<<<<<<< HEAD
 
-        View root = inflater.inflate(R.layout.fragment_tools, container, false);
-=======
-        toolsViewModel =
-                ViewModelProviders.of(this).get(ToolsViewModel.class);
+
+        //View root = inflater.inflate(R.layout.fragment_tools, container, false);
+
+//        toolsViewModel =
+//                ViewModelProviders.of(this).get(ToolsViewModel.class);
         final View root = inflater.inflate(R.layout.fragment_tools, container, false);
         event1 = root.findViewById(R.id.event1);
         event2= root.findViewById(R.id.event2);
@@ -52,7 +52,6 @@ public class ToolsFragment extends Fragment {
 
             }
         });
->>>>>>> 29096d670d17cfaa12cb45ee5bcdef3fdc9428f4
 
         return root;
     }

@@ -1,10 +1,9 @@
 package com.example.hackforwomen.ui.slideshow;
 
 import android.content.Intent;
-<<<<<<< HEAD
+
 import android.net.Uri;
-=======
->>>>>>> 29096d670d17cfaa12cb45ee5bcdef3fdc9428f4
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,16 +30,11 @@ public class SlideshowFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-
-<<<<<<< HEAD
-        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
+        //View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
 
 
-
-
-=======
-        slideshowViewModel =
-                ViewModelProviders.of(this).get(SlideshowViewModel.class);
+//        slideshowViewModel =
+//                ViewModelProviders.of(this).get(SlideshowViewModel.class);
         final View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
         Event1 = root.findViewById(R.id.textView2);
         Event2 = root.findViewById(R.id.textView3);
@@ -59,7 +53,6 @@ public class SlideshowFragment extends Fragment {
                 startActivity(i);
             }
         });
->>>>>>> 29096d670d17cfaa12cb45ee5bcdef3fdc9428f4
         return root;
     }
 }
