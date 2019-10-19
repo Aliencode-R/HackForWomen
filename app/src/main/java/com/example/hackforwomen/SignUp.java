@@ -42,7 +42,7 @@ public class SignUp extends AppCompatActivity {
 
 
                   //first time is updated here
-                  sharedPreferences.edit().putString("firstTime" , "no");
+                  sharedPreferences.edit().putString("firstTime" , "no").apply();
                   finish();
             }
         });
