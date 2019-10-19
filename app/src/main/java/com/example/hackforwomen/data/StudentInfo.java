@@ -33,14 +33,14 @@ public class StudentInfo {
     }
 
     public static String[] names = {
-            "ankit", "Rishabh", "pavitra", "bhawna", "tata", "ashish"
+            "ankit", "Rishabh", "pavitra", "bhawna", "mohit", "ashish" , "rohit" , "kshem" , "Daman" , "suresh" , "virat"
     };
     public static String[] contacts = {
-            "989","179","1550","8700","411","135","88996"
+            "9675142578","9587463258","9784625813","8736517589","9314587625","9345872165","8897483251","9975486215" , "9977845762" , "9758462578" , "9599821727"
     };
     public static String[] emails = {
-            "qwe@gmail.com","rty@yahoo.com","poi@hotmail.com","lki@live.com","gjs@nom.com",
-            "yty@noobmail.com","zas@cd.lk"
+            "roronoazoro@gmail.com","lifegood@yahoo.com","theHero@hotmail.com","thor9877@live.com","gjs@nom.com",
+            "yty@noobmail.com","zas@cd.lk" , "kritomoron4423@gmail.com" , "wildbeast@yahoo.com" , "hellraizer@gmail.com" , "sharma7762@gmail.com"
     };
 
 

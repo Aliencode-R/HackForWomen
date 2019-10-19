@@ -8,12 +8,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.hackforwomen.data.StudentInfo;
+import com.example.hackforwomen.firebase_util.FirebaseImplementation;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUp extends AppCompatActivity {
     TextInputLayout name,moblie,emailid,collegename;
     Button confirmbutton;
     SharedPreferences sharedPreferences;
+    public static StudentInfo myinfo;
 
     String sname , smobile , semailid, scollegename;
     @Override
@@ -40,9 +44,15 @@ public class SignUp extends AppCompatActivity {
                   semailid= emailid.getEditText().getText().toString().trim();
                   scollegename=collegename.getEditText().getText().toString().trim();
 
+                  myinfo = new StudentInfo(sname , smobile , semailid , scollegename);
+                  sharedPreferences.edit().putString("collegename" , scollegename).apply();
+
+                  FirebaseImplementation.InsertStudent(myinfo);
+
+
 
                   //first time is updated here
-                  sharedPreferences.edit().putString("firstTime" , "no");
+                  sharedPreferences.edit().putString("firstTime" , "no").apply();
                   finish();
             }
         });
