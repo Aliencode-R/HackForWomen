@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
+import com.example.hackforwomen.data.StudentInfo;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -15,6 +16,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
 
     private AppBarConfiguration mAppBarConfiguration;
+    public static DatabaseReference dbref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,12 +60,13 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
         sharedPreferences = this.getSharedPreferences("com.example.hackforwomen" , MODE_PRIVATE);
+        dbref = FirebaseDatabase.getInstance().getReference();
         String firstTime = sharedPreferences.getString("firstTime","yes");
         if(firstTime.equals("yes")){
             //i will update firsttime in details activity
             Intent details = new Intent(MainActivity.this ,SignUp.class);
             startActivity(details);
-            finish(); // this is very imp here else if user presses back in details activity without entering details he will enter main activity but this shouldnt happen first time
+            //finish(); // this is very imp here else if user presses back in details activity without entering details he will enter main activity but this shouldnt happen first time
 
         }
     }
