@@ -1,5 +1,7 @@
 package com.example.hackforwomen;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -22,6 +24,8 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 
 public class MainActivity extends AppCompatActivity {
+
+    SharedPreferences sharedPreferences;
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -51,6 +55,15 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+        sharedPreferences = this.getSharedPreferences("com.example.hackforwomen" , MODE_PRIVATE);
+        String firstTime = sharedPreferences.getString("firstTime","yes");
+        if(firstTime.equals("yes")){
+            //i will update firsttime in details activity
+            Intent details = new Intent(MainActivity.this ,SignUp.class);
+            startActivity(details);
+            finish(); // this is very imp here else if user presses back in details activity without entering details he will enter main activity but this shouldnt happen first time
+
+        }
     }
 
     @Override
